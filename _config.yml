@@ -11,7 +11,7 @@ github_repo: "https://github.com/scpiy/scpiy.github.io.git" # you code repositor
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "放松看看生活"
+sidebar-about-description: "始まりの詩贈るよ，歩き出す君へ"
 sidebar-avatar: /img/-5b4d630985c26f5e.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
