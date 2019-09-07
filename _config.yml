@@ -100,7 +100,7 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "nothing",
-        href: ""
+        title: "scpi's notebook",
+        href: "https://h1273396866.gitbook.io/scpi_notebook/"
     },
 ]
