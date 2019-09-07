@@ -54,10 +54,6 @@ sendmail的比较常用的用法可以看这里[How do I use Sendmail?](https://
 
 #### 在flask app里使用邮件服务。
 
-```
-# 我需要知道网易邮箱是使用SSL还是TSL
-```
-
 比较尴尬的是，logging.handlers.SMTPHandler似乎只支持TSL。。
 
 ~~其实是因为我看不懂教程里面说的是什么东西什么的我才不会说出来呢！~~

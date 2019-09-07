@@ -1,4 +1,4 @@
-I"~=<h2 id="flask-mail以及sendmail的简单使用">flask-mail以及sendmail的简单使用</h2>
+I"�<<h2 id="flask-mail以及sendmail的简单使用">flask-mail以及sendmail的简单使用</h2>
 
 <p>关于如何在ubuntu的终端中发送邮件以及如何在flask中使用flask-mail发送邮件。</p>
 
@@ -37,9 +37,6 @@ Hello mail。
 <hr />
 
 <h4 id="在flask-app里使用邮件服务">在flask app里使用邮件服务。</h4>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 我需要知道网易邮箱是使用SSL还是TSL
-</code></pre></div></div>
 
 <p>比较尴尬的是，logging.handlers.SMTPHandler似乎只支持TSL。。</p>
 
