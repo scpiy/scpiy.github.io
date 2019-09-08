@@ -23,7 +23,7 @@ tags:
 
 首先让我发发牢骚，我跟着国人的教程走了好几个流程，改过来改过去，也发送不了，然后看英文结果第一个不到10分钟的时间就弄好了。不过也有可能是我太笨。
 
-首先按照[Install and configure Sendmail on Ubuntu](https://gist.github.com/adamstac/7462202)这里的方法，安装并配置你的sendmail。我自己觉得应该不会看不懂吧？就不翻译了。
+首先按照[Install and configure Sendmail on Ubuntu](https://gist.github.com/adamstac/7462202)这里的方法，安装并配置你的sendmail(想要访问前面那个网址似乎需要一些科学手段)。我自己觉得应该不会看不懂吧？就不翻译了。
 
 1. If sendmail isn't installed, install it: `sudo apt-get install sendmail`
 2. Configure `/etc/hosts` file: `nano /etc/hosts`
