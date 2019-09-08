@@ -130,6 +130,8 @@ def internal_error(error):
 
 简单来说就是定义一个接受错误信息的函数`send_error_message`，当调用错误处理函数时获得错误信息并使用获得的错误信息调用`send_error_message`，先发送邮件，再进行其他的错误处理，当然也可以先进行其他的错误处理，在发送邮件，效果大概一样。
 
+*如果你想要获取更多的错误信息，可以尝试使用`traceback`这个模块，其方法`traceback.format_exc()`会返回与终端相同的错误信息，将这个作为mail的正文就可以获得错误信息了，虽然不是很好看。*
+
 flask-mail发送邮件真的很简单，[flask-mail中文文档](http://www.pythondoc.com/flask-mail/)这里面说的很清楚很明白也很简单，我就直接复制粘贴吧，免得有的人不想在几个页面之间跳来跳去。
 
 > ## 配置 Flask-Mail
