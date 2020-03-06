@@ -1,0 +1,79 @@
+I"]<h2 id="使用windows任务计划程序制作一个休息提示器">使用windows任务计划程序制作一个休息提示器</h2>
+
+<p>作为一个每天与电脑过日子的人，时常一不小心就看着屏幕几个小时直到眼睛酸痛才意识到该休息了，这样可不好，一方面眼睛疼还是挺难受的，更重要的是不注意保养眼睛的话会受到来自时间的制裁的。。。</p>
+
+<p>无需任何基础，无需任何环境，只要你使用的是windows操作系统，就可以自己制作一个定时锁屏的任务来提醒自己<strong>该休息了</strong>。</p>
+
+<p>首先，随便找一个地方，创建一个.txt文件，名字的话随意，叫<code class="highlighter-rouge">task.txt</code>就可以。创建完成后，打开，复制粘贴这样一行代码进去。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rundll32.exe user32.dll,LockWorkStation
+</code></pre></div></div>
+
+<p>然后保存，退出，修改文件后缀名为<code class="highlighter-rouge">.bat</code>，也就是把文件名修改为<code class="highlighter-rouge">task.bat</code>，会有一个警告说这样可能导致文件无法使用，无视他。</p>
+
+<blockquote>
+  <p>说一下，win10系统默认应该是不显示文件后缀名的，可以打开资源管理器，在菜单栏里找“查看”，下面自选项有一个“文件扩展名”的选项</p>
+</blockquote>
+
+<p><a href="https://imgchr.com/i/mPJ6ds"><img src="https://s2.ax1x.com/2019/08/13/mPJ6ds.md.png" alt="mPJ6ds.md.png" /></a></p>
+
+<p>改好之后嘞，按下win+r，打开运行，在输入栏里输入</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>taskschd.msc
+</code></pre></div></div>
+
+<p>按下回车，就可以打开windows的”任务控制程序“，然后在里面创建基本任务</p>
+
+<p><img src="https://s2.ax1x.com/2019/08/13/mPYBfx.png" width="700px" /></p>
+
+<p><img src="https://s2.ax1x.com/2019/08/13/mPYa79.png" width="700px" /></p>
+
+<p>第一页需要填一下任务的名称和描述，可以随便填，不过最好还是有实际含义，这里填上休息一下就好了。</p>
+
+<p><img src="https://s2.ax1x.com/2019/08/13/mPa6PA.png" width="700px" /></p>
+
+<p>第二页需要选择任务的开始时间，如果你是想要每天都执行这个任务，就选择每天，我以每天都执行为例演示。</p>
+
+<blockquote>
+  <p>如果你想要只在工作日执行任务，就选择每周，在里面选上周一到周五，操作大致差不多的</p>
+</blockquote>
+
+<p><img src="https://s2.ax1x.com/2019/08/13/mPY0t1.png" width="700px" /></p>
+
+<p>然后需要填写任务的开始事件，这里我是希望每天早上7点开始执行这个任务，所以选择了7点，如果你有不同需求当然可以自定义。</p>
+
+<p><img src="https://s2.ax1x.com/2019/08/13/mPYU0J.png" width="700px" /></p>
+
+<p>继续到了选择任务执行的操作这里，能选择的只有一个启动程序，我们需要的也正是这个，选择他就好。</p>
+
+<p><img src="https://s2.ax1x.com/2019/08/13/mPYrp6.png" width="700px" /></p>
+
+<p>到了这里，还记得你之前创建的那个<code class="highlighter-rouge">task.bat</code>在哪里么，点击浏览并选中他确认，这里我自己的任务用的名字是<code class="highlighter-rouge">111.bat</code>，这个不影响的。继续下一步。</p>
+
+<p><img src="https://s2.ax1x.com/2019/08/13/mPYs1K.png" width="700px" /></p>
+
+<p>终于要结束了，这是让你确认信息的最终页，但是我们要做的事还没结束，你看我选中了的那个“当点击…”，你也选中一下，然后点完成，之后会跳出他的属性页，还需要更改一下触发时间间隔。</p>
+
+<p><img src="https://s2.ax1x.com/2019/08/13/mPYy6O.png" width="700px" /></p>
+
+<p>选中触发器，因为我的任务已经设置过了，所以描述会和你的不同，<del>大概</del>，总之点击编辑，进入编辑页。</p>
+
+<p><img src="https://s2.ax1x.com/2019/08/13/mPY6XD.png" width="700px" /></p>
+
+<p>选择任务触发间隔，我选择的是每小时触发一次，然后持续时间，因为我们的任务每天都会被执行，所以选择持续一天就可以。</p>
+
+<p>点击确认，大功告成。</p>
+
+<p><strong>虽然是每隔一个小时锁屏一次，但这并不是说这意味着你在锁屏之后就要休息，这只是一个提醒，最好还是把手头的工作完善一下再休息哦，比如给代码写个注释，<del>免得一会回来发现自己不知道自己写的是什么东西了</del></strong></p>
+
+<p>在使用电子产品20分钟以后，看着20米开外的东西坚持20秒，听说这样对眼睛比较好。但20分钟什么的还是放过我吧。emmmmmm。顺便一提看看书也是极好的。</p>
+
+<p>还有什么要说的就是这个任务计划程序其实意外的很好用，比如批量创建某一固定格式名字的文件夹，或者批量更改文件夹的名字，感兴趣的可以自己了解一下，我就不多说了。</p>
+
+<hr />
+
+<p>感谢你的观看，希望能对你有所帮助。</p>
+
+<p>如果有自己解决不了的问题可以联系我。</p>
+
+:ET

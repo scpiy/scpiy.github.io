@@ -1,4 +1,4 @@
-I"�<h2 id="搬家到linux之后怎么做笔记">搬家到linux之后怎么做笔记</h2>
+I"<h2 id="搬家到linux之后怎么做笔记">搬家到linux之后怎么做笔记</h2>
 
 <p>之前在windows上一直用的是印象笔记，搬家到linux上之后发现印象笔记莫得linux版。这就很麻烦。好在常年混迹在各个论坛、私人博客之间，很快就想到了<strong>gitbook</strong>这个东西。</p>
 
@@ -84,7 +84,7 @@ sudo n stable
 
 <p>折腾完之后，可以使用<code class="highlighter-rouge">gitbook serve</code>命令构建静态web界面并启动一个本地服务器以便你去浏览，终端会有网址和端口，复制到浏览器就可以查看你的书籍了。</p>
 
-<p>当你对书籍进行了更改，比如加了一小节，删了一大节之类的，之后，执行<code class="highlighter-rouge">gitbook serve</code>也可以直接构建出更改后的静态界面。</p>
+<p>当你对书籍进行了更改，比如加了一小节，删了一大节之类的，之后，先执行<code class="highlighter-rouge">gitbook init</code>会生成应该被创建的文件，然后执行<code class="highlighter-rouge">gitbook serve</code>可以直接构建出更改后的静态界面。</p>
 
 <p>如果你只想生成静态html网页而不想开启服务器，那就使用<code class="highlighter-rouge">gitbook build</code>。</p>
 
