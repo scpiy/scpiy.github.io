@@ -246,7 +246,7 @@ import依赖包，因为我开了自动导入，不知道需要导入什么包�
 
 好了，接下来就是最后步骤了，终于要结束了。区区一个hello world。
 
-打开`Services`窗口，其位置在**View | Tool Windows | Services** ，或者你可以试试快捷键`Alt+8`。
+打开`Services`窗口，其位置在**View - Tool Windows - Services** ，或者你可以试试快捷键`Alt+8`。
 
 如果你前面的步骤没有问题，这个时候你应该可以看到一个`Docker`在`Services`窗口里。
 
