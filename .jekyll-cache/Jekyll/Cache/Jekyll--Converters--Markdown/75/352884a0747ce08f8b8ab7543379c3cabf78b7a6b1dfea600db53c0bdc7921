@@ -1,4 +1,4 @@
-I"a<blockquote>
+I"f<blockquote>
   <p>最近想写一个python脚本运行在阿里云上每天帮我打卡，发发邮件什么的，但却遇到了不少问题，花了不少时间，终于解决了。</p>
 </blockquote>
 
@@ -8,7 +8,7 @@
 
 <p>这里推荐一种适用于懒人的做法，原文链接<a href="https://blog.csdn.net/u013613428/article/details/80648234">阿里云上安装python 3, pip3, node, npm等环境(CentOS 7)</a>。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install python36
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install python36
 </code></pre></div></div>
 
 <p>安装后是python3.6，虽然截止本文发出为止python3.8都出了，但yum的源里似乎连python3.7都没有，但这样的好处是很方便，而且也很省心。</p>
@@ -33,12 +33,12 @@
 
 <p>第二种方式是在crontab中写明虚拟环境中的python指明特定的python解释器来执行虚拟环境中的脚本，这种方式看起来是这个样子的</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* * * * * /path/to/virtualenv/bin/python /path/to/python_file.py
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* * * * * /path/to/virtualenv/bin/python /path/to/python_file.py
 </code></pre></div></div>
 
 <p>如果想要把脚本输出记录到日志文件中，可以这样进行更改</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* * * * * /path/to/virtualenv/bin/python /path/to/python_file.py &gt;&gt; /path/to/logfile 2&gt;&amp;1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* * * * * /path/to/virtualenv/bin/python /path/to/python_file.py &gt;&gt; /path/to/logfile 2&gt;&amp;1
 </code></pre></div></div>
 
 <p>最后的2&gt;&amp;1是指错误也等同与正常信息输出到日志文件中。</p>
@@ -49,9 +49,9 @@
 
 <p>shell脚本看起来应该是这个样子的</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!bin/bash</span>
-<span class="nb">cd</span> /path/to/virtualenv
-<span class="nb">source</span> ./bin/activate
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!bin/bash
+cd /path/to/virtualenv
+source ./bin/activate
 python /path/to/python_file.py
 deactivate
 </code></pre></div></div>

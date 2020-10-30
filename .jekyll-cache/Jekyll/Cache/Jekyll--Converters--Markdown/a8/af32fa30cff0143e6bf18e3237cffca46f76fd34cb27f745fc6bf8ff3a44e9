@@ -1,4 +1,4 @@
-I"<h2 id="搬家到linux之后怎么做笔记">搬家到linux之后怎么做笔记</h2>
+I"e<h2 id="搬家到linux之后怎么做笔记">搬家到linux之后怎么做笔记</h2>
 
 <p>之前在windows上一直用的是印象笔记，搬家到linux上之后发现印象笔记莫得linux版。这就很麻烦。好在常年混迹在各个论坛、私人博客之间，很快就想到了<strong>gitbook</strong>这个东西。</p>
 
@@ -27,7 +27,7 @@
 
 <p><strong>只针对linux系统</strong></p>
 
-<p>首先你需要下载gitbook，为此你需要有node.js与npm，我的Ubuntu18.04是自带的，可以通过<code class="highlighter-rouge">npm -v</code>查看是否安装了npm，通过<code class="highlighter-rouge">node -v</code>查看是否安装了node.js，注意，如果你的npm版本比较低，那么是需要更新一下的，我刚开始没有更新直接上，报了一堆warning，最后还出了个error。从头又搞了一遍。我的npm的版本是6.9.0，如果你的版本与这个差距有点大那你就要考虑更新一下了。</p>
+<p>首先你需要下载gitbook，为此你需要有node.js与npm，我的Ubuntu18.04是自带的，可以通过<code class="language-plaintext highlighter-rouge">npm -v</code>查看是否安装了npm，通过<code class="language-plaintext highlighter-rouge">node -v</code>查看是否安装了node.js，注意，如果你的npm版本比较低，那么是需要更新一下的，我刚开始没有更新直接上，报了一堆warning，最后还出了个error。从头又搞了一遍。我的npm的版本是6.9.0，如果你的版本与这个差距有点大那你就要考虑更新一下了。</p>
 
 <h4 id="关于ubuntu上npm的更新">关于ubuntu上npm的更新</h4>
 
@@ -35,29 +35,29 @@
 
 <p>讲真网络上npm更新的方法有一大堆，但是不知道是我的问题还是怎么回事，他们似乎都没有提到更新以后需要重启一次电脑更新才会生效，<del>也有可能是我的电脑的问题？</del>但如果你尝试了</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 升级npm自身
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 升级npm自身
 # 这也是升级npm的命令
 npm install -g npm
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 升级node.js
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 升级node.js
 sudo npm cache clean -f
 sudo npm install -g n
 sudo n stable
 </code></pre></div></div>
 
-<p>甚至更多的命令之后，<code class="highlighter-rouge">npm -v</code>的结果还是没有变化，试着reboot一下，或许会有好事发生。</p>
+<p>甚至更多的命令之后，<code class="language-plaintext highlighter-rouge">npm -v</code>的结果还是没有变化，试着reboot一下，或许会有好事发生。</p>
 
 <h4 id="gitbook的安装">gitbook的安装</h4>
 
 <p>我是用了</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo npm install gitbook -g  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo npm install gitbook -g  
 </code></pre></div></div>
 
 <p>和</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo npm install -g gitbook-cli
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo npm install -g gitbook-cli
 </code></pre></div></div>
 
 <p>两条命令，但网络上似乎也有人只用了第二条。似乎是只用第二条的话会在之后初始化书籍的时候自动安装第一个。</p>
@@ -70,25 +70,25 @@ sudo n stable
 
 <p>关联到gitbook账户你就可以发布你的电子书的，不关联的话你也可以在github上创建一个私有仓库实现”跨平台”以及数据备份，看自己需求吧，因为我可能会在手机上查看笔记，所以选择关联到gitbook账户，<del>可这个gitbook的官网不让我进去这我就很生气。</del></p>
 
-<p>切换工作目录到你的书籍目录，假设是<code class="highlighter-rouge">scpi's book</code>，你可以直接执行<code class="highlighter-rouge">gitbook init</code>，然后gitbook会警告你当前目录下莫得<code class="highlighter-rouge">SUMMARY.md</code>文件并帮你生成一个。</p>
+<p>切换工作目录到你的书籍目录，假设是<code class="language-plaintext highlighter-rouge">scpi's book</code>，你可以直接执行<code class="language-plaintext highlighter-rouge">gitbook init</code>，然后gitbook会警告你当前目录下莫得<code class="language-plaintext highlighter-rouge">SUMMARY.md</code>文件并帮你生成一个。</p>
 
-<p>这个<code class="highlighter-rouge">SUMMARY.md</code>文件是你的书的类似目录的东西，它使用无序列表+超链接的方式来管理你的书籍的结构，放张图一看就明白了。</p>
+<p>这个<code class="language-plaintext highlighter-rouge">SUMMARY.md</code>文件是你的书的类似目录的东西，它使用无序列表+超链接的方式来管理你的书籍的结构，放张图一看就明白了。</p>
 
 <p><a href="https://imgchr.com/i/nQIGTI"><img src="https://s2.ax1x.com/2019/09/07/nQIGTI.md.png" alt="nQIGTI.md.png" /></a></p>
 
 <p>看不懂的建议去学学markdown语法，十分钟掌握，异常实用。</p>
 
-<p>每一个<code class="highlighter-rouge">README.md</code>文件都是当前部分的简介，放在书的主目录下就是书籍的简介，放在某个章节下就是那个章节的简介。</p>
+<p>每一个<code class="language-plaintext highlighter-rouge">README.md</code>文件都是当前部分的简介，放在书的主目录下就是书籍的简介，放在某个章节下就是那个章节的简介。</p>
 
-<p>然后就在每个<code class="highlighter-rouge">noetname.md</code>文件里写你的笔记就好了。</p>
+<p>然后就在每个<code class="language-plaintext highlighter-rouge">noetname.md</code>文件里写你的笔记就好了。</p>
 
-<p>折腾完之后，可以使用<code class="highlighter-rouge">gitbook serve</code>命令构建静态web界面并启动一个本地服务器以便你去浏览，终端会有网址和端口，复制到浏览器就可以查看你的书籍了。</p>
+<p>折腾完之后，可以使用<code class="language-plaintext highlighter-rouge">gitbook serve</code>命令构建静态web界面并启动一个本地服务器以便你去浏览，终端会有网址和端口，复制到浏览器就可以查看你的书籍了。</p>
 
-<p>当你对书籍进行了更改，比如加了一小节，删了一大节之类的，之后，先执行<code class="highlighter-rouge">gitbook init</code>会生成应该被创建的文件，然后执行<code class="highlighter-rouge">gitbook serve</code>可以直接构建出更改后的静态界面。</p>
+<p>当你对书籍进行了更改，比如加了一小节，删了一大节之类的，之后，先执行<code class="language-plaintext highlighter-rouge">gitbook init</code>会生成应该被创建的文件，然后执行<code class="language-plaintext highlighter-rouge">gitbook serve</code>可以直接构建出更改后的静态界面。</p>
 
-<p>如果你只想生成静态html网页而不想开启服务器，那就使用<code class="highlighter-rouge">gitbook build</code>。</p>
+<p>如果你只想生成静态html网页而不想开启服务器，那就使用<code class="language-plaintext highlighter-rouge">gitbook build</code>。</p>
 
-<p>如果对关联到gitbook没有兴趣，就直接在书籍目录下<code class="highlighter-rouge">git init</code>初始化仓库并推送到github远程仓库就好。怎么推送就不多说了吧。。。。</p>
+<p>如果对关联到gitbook没有兴趣，就直接在书籍目录下<code class="language-plaintext highlighter-rouge">git init</code>初始化仓库并推送到github远程仓库就好。怎么推送就不多说了吧。。。。</p>
 
 <h4 id="如果你想要关联到gitbook账户">如果你想要关联到gitbook账户。</h4>
 

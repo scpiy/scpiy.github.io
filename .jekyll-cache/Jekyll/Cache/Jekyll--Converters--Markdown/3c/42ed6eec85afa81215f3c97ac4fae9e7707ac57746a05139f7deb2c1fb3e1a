@@ -1,4 +1,4 @@
-I"�<h3 id="送给初学者的python爬虫教程">送给初学者的python爬虫教程</h3>
+I"�<h3 id="送给初学者的python爬虫教程">送给初学者的python爬虫教程</h3>
 
 <hr />
 
@@ -22,7 +22,7 @@
 
 <p>分别可以在命令行通过如下命令安装(windows)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install requests
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install requests
 pip install bs4
 </code></pre></div></div>
 
@@ -32,7 +32,7 @@ pip install bs4
 
 <p>然后说一下这两个库的作用，requests库的作用是得到目标网页的内容，可以通过</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">request</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>实现，url就是我们要解析的网页网址</p>
@@ -67,12 +67,12 @@ pip install bs4
     <span class="c1">#打开一个文件，with语句可以不用管，就像正常打开一个文件也可以，使用with只是我的习惯
 </span>    <span class="c1">#先爬5页，大概就是100条内容
 </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-        <span class="n">html</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">"start"</span><span class="p">:</span> <span class="n">start</span><span class="p">})</span>
+        <span class="n">html</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">"start"</span><span class="p">:</span> <span class="n">start</span><span class="p">})</span>
         <span class="n">start</span> <span class="o">+=</span> <span class="mi">20</span>
-        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s">"lxml"</span><span class="p">)</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">.</span><span class="n">text</span><span class="p">,</span> <span class="s">"lxml"</span><span class="p">)</span>
         <span class="c1">#html.text是获得名为html的对象的内容
-</span>        <span class="k">for</span> <span class="n">comment</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">"span"</span><span class="p">,</span> <span class="n">class_</span> <span class="o">=</span> <span class="s">"short"</span><span class="p">):</span>
-            <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">comment</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+</span>        <span class="k">for</span> <span class="n">comment</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">"span"</span><span class="p">,</span> <span class="n">class_</span> <span class="o">=</span> <span class="s">"short"</span><span class="p">):</span>
+            <span class="n">fp</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">comment</span><span class="p">.</span><span class="n">text</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
         <span class="c1">#find_all会返回找到的所有的匹配对象
 </span>        <span class="c1">#把匹配到的对象(也就是我们要找的东西)的内容写到文件里，完工
 </span></code></pre></div></div>

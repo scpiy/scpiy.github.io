@@ -1,15 +1,15 @@
-I"]<h2 id="使用windows任务计划程序制作一个休息提示器">使用windows任务计划程序制作一个休息提示器</h2>
+I"�<h2 id="使用windows任务计划程序制作一个休息提示器">使用windows任务计划程序制作一个休息提示器</h2>
 
 <p>作为一个每天与电脑过日子的人，时常一不小心就看着屏幕几个小时直到眼睛酸痛才意识到该休息了，这样可不好，一方面眼睛疼还是挺难受的，更重要的是不注意保养眼睛的话会受到来自时间的制裁的。。。</p>
 
 <p>无需任何基础，无需任何环境，只要你使用的是windows操作系统，就可以自己制作一个定时锁屏的任务来提醒自己<strong>该休息了</strong>。</p>
 
-<p>首先，随便找一个地方，创建一个.txt文件，名字的话随意，叫<code class="highlighter-rouge">task.txt</code>就可以。创建完成后，打开，复制粘贴这样一行代码进去。</p>
+<p>首先，随便找一个地方，创建一个.txt文件，名字的话随意，叫<code class="language-plaintext highlighter-rouge">task.txt</code>就可以。创建完成后，打开，复制粘贴这样一行代码进去。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rundll32.exe user32.dll,LockWorkStation
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rundll32.exe user32.dll,LockWorkStation
 </code></pre></div></div>
 
-<p>然后保存，退出，修改文件后缀名为<code class="highlighter-rouge">.bat</code>，也就是把文件名修改为<code class="highlighter-rouge">task.bat</code>，会有一个警告说这样可能导致文件无法使用，无视他。</p>
+<p>然后保存，退出，修改文件后缀名为<code class="language-plaintext highlighter-rouge">.bat</code>，也就是把文件名修改为<code class="language-plaintext highlighter-rouge">task.bat</code>，会有一个警告说这样可能导致文件无法使用，无视他。</p>
 
 <blockquote>
   <p>说一下，win10系统默认应该是不显示文件后缀名的，可以打开资源管理器，在菜单栏里找“查看”，下面自选项有一个“文件扩展名”的选项</p>
@@ -19,7 +19,7 @@
 
 <p>改好之后嘞，按下win+r，打开运行，在输入栏里输入</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>taskschd.msc
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>taskschd.msc
 </code></pre></div></div>
 
 <p>按下回车，就可以打开windows的”任务控制程序“，然后在里面创建基本任务</p>
@@ -48,7 +48,7 @@
 
 <p><img src="https://s2.ax1x.com/2019/08/13/mPYrp6.png" width="700px" /></p>
 
-<p>到了这里，还记得你之前创建的那个<code class="highlighter-rouge">task.bat</code>在哪里么，点击浏览并选中他确认，这里我自己的任务用的名字是<code class="highlighter-rouge">111.bat</code>，这个不影响的。继续下一步。</p>
+<p>到了这里，还记得你之前创建的那个<code class="language-plaintext highlighter-rouge">task.bat</code>在哪里么，点击浏览并选中他确认，这里我自己的任务用的名字是<code class="language-plaintext highlighter-rouge">111.bat</code>，这个不影响的。继续下一步。</p>
 
 <p><img src="https://s2.ax1x.com/2019/08/13/mPYs1K.png" width="700px" /></p>
 

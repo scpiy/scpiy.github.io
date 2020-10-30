@@ -2,7 +2,7 @@
 title: scpi's Blog
 SEOTitle: 七色比雪的博客 | scpi's Blog
 header-img: img/post-bg-desk.jpg
-email: h1273396866@gmail.com
+email: h1273396866@163.com
 description: "Every failure is leading towards success."
 keyword: "scpi, 七色比雪"
 url: "http://scpiy.github.io"          # your host, for absolute URL
@@ -53,6 +53,7 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
+  math_engine: mathjax
 
 
 
