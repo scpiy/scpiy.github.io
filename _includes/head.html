@@ -9,6 +9,10 @@
     
     <title>{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}</title>
 
+    {% unless page.no_latex %}
+        {% include latex.html %}
+    {% endunless %}
+
     <!-- Web App Manifest -->
     <link rel="manifest" href="{{ site.baseurl }}/pwa/manifest.json">
 
@@ -52,9 +56,5 @@
 
     <!-- ga & ba script hoook -->
 
-    <!-- Load KaTeX -->
-    <script type="text/javascript" async
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
     <script></script>
 </head>
